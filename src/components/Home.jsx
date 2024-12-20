@@ -35,7 +35,7 @@ export default function Home() {
 
     const Reviews = ({ image, rating, review }) => {
         return (
-            <div className='flex flex-col items-center'>
+            <div data-aos="fade-right" className='flex flex-col items-center'>
                 <img src={image} alt="" className='w-40 h-20 object-contain' />
                 <span>
                     <FaStar className='text-yellow-400 text-xl' />{rating}/5
@@ -47,7 +47,7 @@ export default function Home() {
 
     const Card = ({ image, packageType, duration, amount, type }) => {
         return (
-            <div className=' transition-transform duration-300 hover:scale-105' >
+            <div data-aos="fade-left" className=' transition-transform duration-300 hover:scale-105' >
                 <img src={image} alt="" className='w-full rounded-[10px] object-cover bg-white shadow-md h-[212px]' />
                 <p className='text-orange-500 text-base font-semibold pt-4 pb-2'>{type}</p>
                 <h6 className='text-2xl'>{packageType}</h6>
@@ -94,8 +94,8 @@ export default function Home() {
                     backgroundPosition: 'center',
                 }}
             >
-                <h1 className='text-violet-50 text-center lg:text-5xl text-3xl pt-10 pb-8'>Ecanomy Hajj & Umrah Package </h1>
-                <div className='flex justify-center py-8'>
+                <h1 data-aos="fade-up" className='text-violet-50 text-center lg:text-5xl text-3xl pt-10 pb-8'>Ecanomy Hajj & Umrah Package </h1>
+                <div data-aos="fade-up" className='flex justify-center py-8'>
                     <button className='bg-orange-500 rounded-full px-10 py-4 outline-none border-none font-semibold text-base hoverBtn'>Get a Package Price</button>
                 </div>
             </div>
@@ -109,8 +109,8 @@ export default function Home() {
                     <Reviews image={TheYP} rating="4.7" review="3040" />
                     <Reviews image={Angi} rating="4.5" review="2450" />
                 </div>
-                <h2 className='font-semibold lg:text-5xl text-3xl text-center'>Hajj And Umrah Special Offers</h2>
-                <p className='text-center pt-8 font-medium'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, mollitia.</p>
+                <h2 data-aos="fade-right" className='font-semibold lg:text-5xl text-3xl text-center'>Hajj And Umrah Special Offers</h2>
+                <p data-aos="fade-right" className='text-center pt-8 font-medium'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, mollitia.</p>
                 <div className='grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 pt-16'>
                     <Card amount="15,000" duration="42-45" image={Hajj} packageType="Hajj Package" type="Clasic" />
                     <Card amount="12,000" duration="42-45" image={HajjEc} packageType="Hajj Package" type="Ecanomy" />
@@ -122,11 +122,11 @@ export default function Home() {
             <section className='bg-white relative container mx-auto px-6'>
 
                 <div className="container mx-auto px-6 lg:py-24 py-12 flex flex-col lg:flex-row lg:items-center">
-                    <img
+                    <img data-aos="fade-left"
                         src={Ticket}
                         alt="#"
                         className="lg:absolute lg:right-10 xl:w-auto pt-5 lg:w-1/2 lg:h-[700px] rounded-2xl h-80 order-1 lg:order-none" />
-                    <div>
+                    <div  data-aos="fade-right">
                         <h2 className="font-semibold lg:text-5xl text-3xl">What Do We Offer</h2>
                         <p className="lg:w-1/3 leading-8 font-semibold py-6">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores iure facere distinctio recusandae, laborum eum inventore illum beatae est, ex natus minus harum magnam reprehenderit error a! Quasi, minus est?
@@ -149,7 +149,7 @@ export default function Home() {
 
             <section className='container mx-auto px-6 lg:pt-24 pt-12'>
                 <h4 className='text-2xl font-semibold text-center'> Our Affiliations Flights & Hotels</h4>
-                <div className='flex flex-wrap items-center justify-evenly py-16 gap-8'>
+                <div data-aos="fade-down-right" className='flex flex-wrap items-center justify-evenly py-16 gap-8'>
                     <img src={KuwaitA} alt="" className='w-40 h-20 object-contain' />
                     <img src={Biman} alt="" className='w-40 h-20 object-contain' />
                     <img src={Qatar} alt="" className='w-40 h-20 object-contain' />
@@ -159,13 +159,14 @@ export default function Home() {
                 </div>
                 <h2 className='font-semibold lg:text-5xl text-3xl text-center py-4'> All Inculusive Packages</h2>
                 <p className='lg:w-2/5 mx-auto leading-8 py-6 text-center'> All inculusive Umrah package with good hotels. Solely focus and maximize every minute of your tour with our cheap Umrah package.</p>
-                <div className='grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 py-16'>
+                <div  data-aos="flip-left" className='grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 py-16'>
                     <Packages image={Alaqsa} text='In Islam , theterm "al-Aqsa" refers to the Noble SancTuary. The masque is believed.' title="Al-aqsa packages" />
                     <Packages image={hajpac} text='Muslims practice all other patterns of tourism such as business, attending conference and cultural tourism' title="Islamic Tour packages" />
                     <Packages image={umrahpac} text='The hajj is an annual islamic pilgrimage to mecca, Saudi Arabia, the holiest city for Muslims.' title="Hajj packages" />
                     <Packages image={ziyarat} text='The Umrah is an Islamic pilgrimage to mecca that can be undertaken at any time of the year.' title="Umarh packages" />
                 </div>
-                <div className='lg:flex items-center gap-x-16 lg:pt-16'>
+                <div data-aos="fade-up"
+     data-aos-duration="3000" className='lg:flex items-center gap-x-16 lg:pt-16'>
                     <div className='relative lg:w-[45rem] lg:h-[35rem] bg-white px-8 py-[3.5rem]'>
                         <img src={Kabahdua} alt="" className='w-full h-full rounded-[10px] object-cover relative z-10' />
                         <div className='absolute bg-orange-500 h-full w-2/5 top-0 left-2/4'></div>

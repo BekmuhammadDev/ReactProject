@@ -3,17 +3,18 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import KabahLogo from "../assets/logo/Kabah.jpg"
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 export default function Navbar() {
-    const [dropdown, setdropdown] = useState(false);
 
+    const [dropdown, setdropdown] = useState(false);
     const showDropdown = () => {
         setdropdown(!dropdown)
     }
 
     const [isScrolled, setIsScrolled] = useState(false);
-
     useEffect(() => {
       const handleScroll = () => {
         setIsScrolled(window.scrollY > 50);
@@ -25,8 +26,15 @@ export default function Navbar() {
       return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    useEffect(() => {
+        AOS.init({
+          duration: 800, // Animatsiya davomiyligi (ms)
+        });
+      }, []);
+    
+
     return (
-        <nav className={`fixed top-0 left-0 w-full z-50 p-4 transition-all duration-300 ${
+        <nav data-aos="fade-up" className={`fixed top-0 left-0 w-full z-50 p-4 transition-all duration-300  ${
             isScrolled ? "bg-gray-800 backdrop-blur-md" : "bg-transparent"}`}>
             <div className='conatiner mx-auto lg:px-6'>
                 <div className='lg:w-full w-11/12 mx-auto h-full flex  justify-between  items-center' >
