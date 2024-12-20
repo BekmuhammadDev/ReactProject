@@ -89,16 +89,17 @@ export default function Home() {
         <>
             <div className=" bg-no-repeat min-h-[50rem] h-screen pt-24"
                 style={{
-                    backgroundImage: "url('../../public/main_image.jpg')",
+                    backgroundImage: "url('/main_image.jpg')",
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                }}>
+                }}
+            >
                 <h1 className='text-violet-50 text-center lg:text-5xl text-3xl pt-10 pb-8'>Ecanomy Hajj & Umrah Package </h1>
-                {/* <p className='text-violet-50 font-light text-center lg:w1/2 mx-auto leading-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda possimus est sapiente, tenetur in quia!</p> */}
                 <div className='flex justify-center py-8'>
                     <button className='bg-orange-500 rounded-full px-10 py-4 outline-none border-none font-semibold text-base hoverBtn'>Get a Package Price</button>
                 </div>
             </div>
+
 
             <section className='conatiner mx-auto px-6 xl:pt-16 pb-24'>
                 <div className='flex flex-wrap items-center lg:justify-evenly justify-center py-16 gap-y-8 gap-12'>
@@ -124,7 +125,7 @@ export default function Home() {
                     <img
                         src={Ticket}
                         alt="#"
-                        className="lg:absolute lg:right-10 xl:w-auto pt-5 lg:w-1/2 lg:h-[700px] rounded-2xl h-80 order-1 lg:order-none"/>
+                        className="lg:absolute lg:right-10 xl:w-auto pt-5 lg:w-1/2 lg:h-[700px] rounded-2xl h-80 order-1 lg:order-none" />
                     <div>
                         <h2 className="font-semibold lg:text-5xl text-3xl">What Do We Offer</h2>
                         <p className="lg:w-1/3 leading-8 font-semibold py-6">
